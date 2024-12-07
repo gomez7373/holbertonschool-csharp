@@ -1,0 +1,6 @@
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-hello_world/5-print_float/obj/Debug/netcoreapp2.1/5-print_float.csproj.AssemblyReference.cache
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-hello_world/5-print_float/obj/Debug/netcoreapp2.1/5-print_float.GeneratedMSBuildEditorConfig.editorconfig
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-hello_world/5-print_float/obj/Debug/netcoreapp2.1/5-print_float.AssemblyInfoInputs.cache
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-hello_world/5-print_float/obj/Debug/netcoreapp2.1/5-print_float.AssemblyInfo.cs
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-hello_world/5-print_float/obj/Debug/netcoreapp2.1/5-print_float.csproj.CoreCompileInputs.cache
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-hello_world/5-print_float/obj/Debug/netcoreapp2.1/5-print_float.sourcelink.json

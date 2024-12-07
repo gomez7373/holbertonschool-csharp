@@ -1,0 +1,5 @@
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-hello_world/8-print_variables/obj/Debug/net8.0/8-print_variables.GeneratedMSBuildEditorConfig.editorconfig
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-hello_world/8-print_variables/obj/Debug/net8.0/8-print_variables.AssemblyInfoInputs.cache
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-hello_world/8-print_variables/obj/Debug/net8.0/8-print_variables.AssemblyInfo.cs
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-hello_world/8-print_variables/obj/Debug/net8.0/8-print_variables.csproj.CoreCompileInputs.cache
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-hello_world/8-print_variables/obj/Debug/net8.0/8-print_variables.sourcelink.json
