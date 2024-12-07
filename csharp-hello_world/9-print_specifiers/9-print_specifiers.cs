@@ -1,13 +1,12 @@
 ﻿using System;
-
+using System.Globalization;
 class Program
 {
     static void Main(string[] args)
     {
-        double percent = 75.5345;
+        double percent = .7553;
         double currency = 98765.4321;
-        Console.WriteLine($"Percent: {percent:F2}%");
-        Console.WriteLine($"Currency: {currency:C2}");
+        Console.WriteLine("Percent: {0:P2}", percent);
+        Console.WriteLine("Currency: " + currency.ToString("C", CultureInfo.CreateSpecificCulture("en-US")));
     }
 }
-

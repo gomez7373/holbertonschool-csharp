@@ -9,4 +9,3 @@ class Program
         Console.WriteLine($"{str1} {str2}");
     }
 }
-
