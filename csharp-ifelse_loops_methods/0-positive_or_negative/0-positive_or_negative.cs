@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 
 class Program
 {
@@ -6,17 +6,21 @@ class Program
     {
         Random rndm = new Random();
         int number = rndm.Next(-10, 10);
-        if (number > 0)
+        string result;
+        switch (number)
         {
-            Console.WriteLine($"{number} is positive");
+            case var a when number > 0:
+            result = "is positive";
+            break;
+
+            case var a when number == 0:
+            result = "is zero";
+            break;
+
+            default:
+            result = "is negative";
+            break;
         }
-        else if (number == 0)
-        {
-            Console.WriteLine($"{number} is zero");
-        }
-        else
-        {
-            Console.WriteLine($"{number} is negative");
+        Console.WriteLine($"{number} {result}");
         }
     }
-}
