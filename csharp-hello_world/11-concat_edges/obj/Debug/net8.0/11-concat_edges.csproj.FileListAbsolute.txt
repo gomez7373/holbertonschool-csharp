@@ -1,0 +1,15 @@
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-hello_world/11-concat_edges/bin/Debug/net8.0/11-concat_edges
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-hello_world/11-concat_edges/bin/Debug/net8.0/11-concat_edges.deps.json
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-hello_world/11-concat_edges/bin/Debug/net8.0/11-concat_edges.runtimeconfig.json
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-hello_world/11-concat_edges/bin/Debug/net8.0/11-concat_edges.dll
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-hello_world/11-concat_edges/bin/Debug/net8.0/11-concat_edges.pdb
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-hello_world/11-concat_edges/obj/Debug/net8.0/11-concat_edges.GeneratedMSBuildEditorConfig.editorconfig
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-hello_world/11-concat_edges/obj/Debug/net8.0/11-concat_edges.AssemblyInfoInputs.cache
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-hello_world/11-concat_edges/obj/Debug/net8.0/11-concat_edges.AssemblyInfo.cs
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-hello_world/11-concat_edges/obj/Debug/net8.0/11-concat_edges.csproj.CoreCompileInputs.cache
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-hello_world/11-concat_edges/obj/Debug/net8.0/11-concat_edges.sourcelink.json
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-hello_world/11-concat_edges/obj/Debug/net8.0/11-concat_edges.dll
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-hello_world/11-concat_edges/obj/Debug/net8.0/refint/11-concat_edges.dll
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-hello_world/11-concat_edges/obj/Debug/net8.0/11-concat_edges.pdb
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-hello_world/11-concat_edges/obj/Debug/net8.0/11-concat_edges.genruntimeconfig.cache
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-hello_world/11-concat_edges/obj/Debug/net8.0/ref/11-concat_edges.dll
