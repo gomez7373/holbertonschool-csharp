@@ -1,0 +1,15 @@
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-ifelse_loops_methods/0-positive_or_negative/bin/Debug/net8.0/0-positive_or_negative
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-ifelse_loops_methods/0-positive_or_negative/bin/Debug/net8.0/0-positive_or_negative.deps.json
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-ifelse_loops_methods/0-positive_or_negative/bin/Debug/net8.0/0-positive_or_negative.runtimeconfig.json
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-ifelse_loops_methods/0-positive_or_negative/bin/Debug/net8.0/0-positive_or_negative.dll
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-ifelse_loops_methods/0-positive_or_negative/bin/Debug/net8.0/0-positive_or_negative.pdb
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-ifelse_loops_methods/0-positive_or_negative/obj/Debug/net8.0/0-positive_or_negative.GeneratedMSBuildEditorConfig.editorconfig
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-ifelse_loops_methods/0-positive_or_negative/obj/Debug/net8.0/0-positive_or_negative.AssemblyInfoInputs.cache
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-ifelse_loops_methods/0-positive_or_negative/obj/Debug/net8.0/0-positive_or_negative.AssemblyInfo.cs
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-ifelse_loops_methods/0-positive_or_negative/obj/Debug/net8.0/0-positive_or_negative.csproj.CoreCompileInputs.cache
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-ifelse_loops_methods/0-positive_or_negative/obj/Debug/net8.0/0-positive_or_negative.sourcelink.json
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-ifelse_loops_methods/0-positive_or_negative/obj/Debug/net8.0/0-positive_or_negative.dll
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-ifelse_loops_methods/0-positive_or_negative/obj/Debug/net8.0/refint/0-positive_or_negative.dll
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-ifelse_loops_methods/0-positive_or_negative/obj/Debug/net8.0/0-positive_or_negative.pdb
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-ifelse_loops_methods/0-positive_or_negative/obj/Debug/net8.0/0-positive_or_negative.genruntimeconfig.cache
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-ifelse_loops_methods/0-positive_or_negative/obj/Debug/net8.0/ref/0-positive_or_negative.dll
