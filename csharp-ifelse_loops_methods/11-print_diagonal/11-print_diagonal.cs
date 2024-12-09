@@ -7,11 +7,14 @@ class Line
         if (length <= 0)
         {
             Console.WriteLine();
-            return;
         }
-        for (int i = 0; i < length; i++)
+        else
         {
-            Console.WriteLine(new string(' ', i) + "\\");
+            for (int x = 0; x < length; x++)
+            {
+                Console.Write("\\");
+            }
+            Console.WriteLine();
         }
     }
 }
