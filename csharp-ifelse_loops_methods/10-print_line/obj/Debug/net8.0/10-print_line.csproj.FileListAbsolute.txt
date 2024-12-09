@@ -1,0 +1,5 @@
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-ifelse_loops_methods/10-print_line/obj/Debug/net8.0/10-print_line.GeneratedMSBuildEditorConfig.editorconfig
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-ifelse_loops_methods/10-print_line/obj/Debug/net8.0/10-print_line.AssemblyInfoInputs.cache
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-ifelse_loops_methods/10-print_line/obj/Debug/net8.0/10-print_line.AssemblyInfo.cs
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-ifelse_loops_methods/10-print_line/obj/Debug/net8.0/10-print_line.csproj.CoreCompileInputs.cache
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-ifelse_loops_methods/10-print_line/obj/Debug/net8.0/10-print_line.sourcelink.json
