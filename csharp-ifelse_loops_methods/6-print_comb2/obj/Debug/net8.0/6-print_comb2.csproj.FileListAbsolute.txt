@@ -1,0 +1,15 @@
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-ifelse_loops_methods/6-print_comb2/bin/Debug/net8.0/6-print_comb2
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-ifelse_loops_methods/6-print_comb2/bin/Debug/net8.0/6-print_comb2.deps.json
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-ifelse_loops_methods/6-print_comb2/bin/Debug/net8.0/6-print_comb2.runtimeconfig.json
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-ifelse_loops_methods/6-print_comb2/bin/Debug/net8.0/6-print_comb2.dll
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-ifelse_loops_methods/6-print_comb2/bin/Debug/net8.0/6-print_comb2.pdb
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-ifelse_loops_methods/6-print_comb2/obj/Debug/net8.0/6-print_comb2.GeneratedMSBuildEditorConfig.editorconfig
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-ifelse_loops_methods/6-print_comb2/obj/Debug/net8.0/6-print_comb2.AssemblyInfoInputs.cache
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-ifelse_loops_methods/6-print_comb2/obj/Debug/net8.0/6-print_comb2.AssemblyInfo.cs
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-ifelse_loops_methods/6-print_comb2/obj/Debug/net8.0/6-print_comb2.csproj.CoreCompileInputs.cache
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-ifelse_loops_methods/6-print_comb2/obj/Debug/net8.0/6-print_comb2.sourcelink.json
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-ifelse_loops_methods/6-print_comb2/obj/Debug/net8.0/6-print_comb2.dll
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-ifelse_loops_methods/6-print_comb2/obj/Debug/net8.0/refint/6-print_comb2.dll
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-ifelse_loops_methods/6-print_comb2/obj/Debug/net8.0/6-print_comb2.pdb
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-ifelse_loops_methods/6-print_comb2/obj/Debug/net8.0/6-print_comb2.genruntimeconfig.cache
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-ifelse_loops_methods/6-print_comb2/obj/Debug/net8.0/ref/6-print_comb2.dll
