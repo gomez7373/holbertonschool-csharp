@@ -1,6 +1,0 @@
-/home/sgc91/ar_vr_1st/holbertonschool-csharp/15-square_matrix/obj/Debug/netcoreapp2.1/15-square_matrix.csproj.AssemblyReference.cache
-/home/sgc91/ar_vr_1st/holbertonschool-csharp/15-square_matrix/obj/Debug/netcoreapp2.1/15-square_matrix.GeneratedMSBuildEditorConfig.editorconfig
-/home/sgc91/ar_vr_1st/holbertonschool-csharp/15-square_matrix/obj/Debug/netcoreapp2.1/15-square_matrix.AssemblyInfoInputs.cache
-/home/sgc91/ar_vr_1st/holbertonschool-csharp/15-square_matrix/obj/Debug/netcoreapp2.1/15-square_matrix.AssemblyInfo.cs
-/home/sgc91/ar_vr_1st/holbertonschool-csharp/15-square_matrix/obj/Debug/netcoreapp2.1/15-square_matrix.csproj.CoreCompileInputs.cache
-/home/sgc91/ar_vr_1st/holbertonschool-csharp/15-square_matrix/obj/Debug/netcoreapp2.1/15-square_matrix.sourcelink.json

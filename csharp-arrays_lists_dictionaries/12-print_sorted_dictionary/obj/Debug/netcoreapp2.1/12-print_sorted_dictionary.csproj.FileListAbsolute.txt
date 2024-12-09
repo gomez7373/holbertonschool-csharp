@@ -1,6 +1,0 @@
-/home/sgc91/ar_vr_1st/holbertonschool-csharp/12-print_sorted_dictionary/obj/Debug/netcoreapp2.1/12-print_sorted_dictionary.csproj.AssemblyReference.cache
-/home/sgc91/ar_vr_1st/holbertonschool-csharp/12-print_sorted_dictionary/obj/Debug/netcoreapp2.1/12-print_sorted_dictionary.GeneratedMSBuildEditorConfig.editorconfig
-/home/sgc91/ar_vr_1st/holbertonschool-csharp/12-print_sorted_dictionary/obj/Debug/netcoreapp2.1/12-print_sorted_dictionary.AssemblyInfoInputs.cache
-/home/sgc91/ar_vr_1st/holbertonschool-csharp/12-print_sorted_dictionary/obj/Debug/netcoreapp2.1/12-print_sorted_dictionary.AssemblyInfo.cs
-/home/sgc91/ar_vr_1st/holbertonschool-csharp/12-print_sorted_dictionary/obj/Debug/netcoreapp2.1/12-print_sorted_dictionary.csproj.CoreCompileInputs.cache
-/home/sgc91/ar_vr_1st/holbertonschool-csharp/12-print_sorted_dictionary/obj/Debug/netcoreapp2.1/12-print_sorted_dictionary.sourcelink.json

@@ -1,6 +1,0 @@
-/home/sgc91/ar_vr_1st/holbertonschool-csharp/8-number_keys/obj/Debug/netcoreapp2.1/8-number_keys.csproj.AssemblyReference.cache
-/home/sgc91/ar_vr_1st/holbertonschool-csharp/8-number_keys/obj/Debug/netcoreapp2.1/8-number_keys.GeneratedMSBuildEditorConfig.editorconfig
-/home/sgc91/ar_vr_1st/holbertonschool-csharp/8-number_keys/obj/Debug/netcoreapp2.1/8-number_keys.AssemblyInfoInputs.cache
-/home/sgc91/ar_vr_1st/holbertonschool-csharp/8-number_keys/obj/Debug/netcoreapp2.1/8-number_keys.AssemblyInfo.cs
-/home/sgc91/ar_vr_1st/holbertonschool-csharp/8-number_keys/obj/Debug/netcoreapp2.1/8-number_keys.csproj.CoreCompileInputs.cache
-/home/sgc91/ar_vr_1st/holbertonschool-csharp/8-number_keys/obj/Debug/netcoreapp2.1/8-number_keys.sourcelink.json

@@ -1,6 +1,0 @@
-/home/sgc91/ar_vr_1st/holbertonschool-csharp/13-best_score/obj/Debug/netcoreapp2.1/13-best_score.csproj.AssemblyReference.cache
-/home/sgc91/ar_vr_1st/holbertonschool-csharp/13-best_score/obj/Debug/netcoreapp2.1/13-best_score.GeneratedMSBuildEditorConfig.editorconfig
-/home/sgc91/ar_vr_1st/holbertonschool-csharp/13-best_score/obj/Debug/netcoreapp2.1/13-best_score.AssemblyInfoInputs.cache
-/home/sgc91/ar_vr_1st/holbertonschool-csharp/13-best_score/obj/Debug/netcoreapp2.1/13-best_score.AssemblyInfo.cs
-/home/sgc91/ar_vr_1st/holbertonschool-csharp/13-best_score/obj/Debug/netcoreapp2.1/13-best_score.csproj.CoreCompileInputs.cache
-/home/sgc91/ar_vr_1st/holbertonschool-csharp/13-best_score/obj/Debug/netcoreapp2.1/13-best_score.sourcelink.json

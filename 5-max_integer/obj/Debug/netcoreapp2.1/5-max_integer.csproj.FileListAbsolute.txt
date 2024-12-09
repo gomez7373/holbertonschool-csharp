@@ -1,6 +1,0 @@
-/home/sgc91/ar_vr_1st/holbertonschool-csharp/5-max_integer/obj/Debug/netcoreapp2.1/5-max_integer.csproj.AssemblyReference.cache
-/home/sgc91/ar_vr_1st/holbertonschool-csharp/5-max_integer/obj/Debug/netcoreapp2.1/5-max_integer.GeneratedMSBuildEditorConfig.editorconfig
-/home/sgc91/ar_vr_1st/holbertonschool-csharp/5-max_integer/obj/Debug/netcoreapp2.1/5-max_integer.AssemblyInfoInputs.cache
-/home/sgc91/ar_vr_1st/holbertonschool-csharp/5-max_integer/obj/Debug/netcoreapp2.1/5-max_integer.AssemblyInfo.cs
-/home/sgc91/ar_vr_1st/holbertonschool-csharp/5-max_integer/obj/Debug/netcoreapp2.1/5-max_integer.csproj.CoreCompileInputs.cache
-/home/sgc91/ar_vr_1st/holbertonschool-csharp/5-max_integer/obj/Debug/netcoreapp2.1/5-max_integer.sourcelink.json
