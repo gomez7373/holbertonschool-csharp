@@ -1,0 +1,15 @@
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/TestDotNet8/bin/Debug/net8.0/TestDotNet8
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/TestDotNet8/bin/Debug/net8.0/TestDotNet8.deps.json
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/TestDotNet8/bin/Debug/net8.0/TestDotNet8.runtimeconfig.json
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/TestDotNet8/bin/Debug/net8.0/TestDotNet8.dll
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/TestDotNet8/bin/Debug/net8.0/TestDotNet8.pdb
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/TestDotNet8/obj/Debug/net8.0/TestDotNet8.GeneratedMSBuildEditorConfig.editorconfig
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/TestDotNet8/obj/Debug/net8.0/TestDotNet8.AssemblyInfoInputs.cache
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/TestDotNet8/obj/Debug/net8.0/TestDotNet8.AssemblyInfo.cs
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/TestDotNet8/obj/Debug/net8.0/TestDotNet8.csproj.CoreCompileInputs.cache
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/TestDotNet8/obj/Debug/net8.0/TestDotNet8.sourcelink.json
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/TestDotNet8/obj/Debug/net8.0/TestDotNet8.dll
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/TestDotNet8/obj/Debug/net8.0/refint/TestDotNet8.dll
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/TestDotNet8/obj/Debug/net8.0/TestDotNet8.pdb
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/TestDotNet8/obj/Debug/net8.0/TestDotNet8.genruntimeconfig.cache
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/TestDotNet8/obj/Debug/net8.0/ref/TestDotNet8.dll
