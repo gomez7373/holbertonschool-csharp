@@ -61,27 +61,13 @@ done
 # Step 8: Modify the .csproj file
 csproj_file="${task_name}.csproj"
 if [ -f "$csproj_file" ]; then
-  echo "Opening the .csproj file for manual editing..."
-  echo "Please modify the file as follows and save it:"
-  echo "
-<Project Sdk=\"Microsoft.NET.Sdk\">
-
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
-    <RootNamespace>_2_replace_element</RootNamespace>
-  </PropertyGroup>
-
-</Project>
-"
-  read -p "Press Enter to open the file with vim..."
-  vim "$csproj_file"
-  echo "Make sure to save the changes before exiting vim."
+  echo "Editing the .csproj file to update configuration..."
+  sed -i 's|<TargetFramework>.*</TargetFramework>|<TargetFramework>net8.0</TargetFramework>|' "$csproj_file"
+  sed -i '/<RootNamespace>/a \    <ImplicitUsings>enable</ImplicitUsings>\n    <Nullable>enable</Nullable>' "$csproj_file"
 else
   echo "Error: $csproj_file not found!"
   exit 1
 fi
-
 
 # Step 9: Congratulate the user
 congratulate "$task_name"
