@@ -58,16 +58,9 @@ for file in "${files_to_delete[@]}"; do
   fi
 done
 
-# Step 8: Modify the .csproj file
-csproj_file="${task_name}.csproj"
-if [ -f "$csproj_file" ]; then
-  echo "Editing the .csproj file to update configuration..."
-  sed -i 's|<TargetFramework>.*</TargetFramework>|<TargetFramework>net8.0</TargetFramework>|' "$csproj_file"
-  sed -i '/<RootNamespace>/a \    <ImplicitUsings>enable</ImplicitUsings>\n    <Nullable>enable</Nullable>' "$csproj_file"
-else
-  echo "Error: $csproj_file not found!"
-  exit 1
-fi
+# Step 8: Edit the renamed .cs file
+read -p "Ready to edit $csproj_file? (Press Enter to continue)"
+vim "$csproj_file"
 
 # Step 9: Congratulate the user
 congratulate "$task_name"
