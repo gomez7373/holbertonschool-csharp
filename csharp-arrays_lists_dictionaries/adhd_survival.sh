@@ -62,12 +62,23 @@ done
 csproj_file="${task_name}.csproj"
 if [ -f "$csproj_file" ]; then
   echo "Editing the .csproj file to update configuration..."
-  sed -i 's|<TargetFramework>.*</TargetFramework>|<TargetFramework>net8.0</TargetFramework>|' "$csproj_file"
-  sed -i '/<RootNamespace>/a \    <ImplicitUsings>enable</ImplicitUsings>\n    <Nullable>enable</Nullable>' "$csproj_file"
+  # Replace the entire .csproj file content with the new structure
+  cat > "$csproj_file" <<EOL
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <RootNamespace>_2_replace_element</RootNamespace>
+  </PropertyGroup>
+
+</Project>
+EOL
 else
   echo "Error: $csproj_file not found!"
   exit 1
 fi
+
 
 # Step 9: Congratulate the user
 congratulate "$task_name"
