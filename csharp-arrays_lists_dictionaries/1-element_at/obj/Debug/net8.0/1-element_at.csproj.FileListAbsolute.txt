@@ -1,0 +1,15 @@
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-arrays_lists_dictionaries/1-element_at/obj/Debug/net8.0/1-element_at.GeneratedMSBuildEditorConfig.editorconfig
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-arrays_lists_dictionaries/1-element_at/obj/Debug/net8.0/1-element_at.AssemblyInfoInputs.cache
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-arrays_lists_dictionaries/1-element_at/obj/Debug/net8.0/1-element_at.AssemblyInfo.cs
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-arrays_lists_dictionaries/1-element_at/obj/Debug/net8.0/1-element_at.csproj.CoreCompileInputs.cache
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-arrays_lists_dictionaries/1-element_at/obj/Debug/net8.0/1-element_at.sourcelink.json
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-arrays_lists_dictionaries/1-element_at/bin/Debug/net8.0/1-element_at
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-arrays_lists_dictionaries/1-element_at/bin/Debug/net8.0/1-element_at.deps.json
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-arrays_lists_dictionaries/1-element_at/bin/Debug/net8.0/1-element_at.runtimeconfig.json
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-arrays_lists_dictionaries/1-element_at/bin/Debug/net8.0/1-element_at.dll
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-arrays_lists_dictionaries/1-element_at/bin/Debug/net8.0/1-element_at.pdb
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-arrays_lists_dictionaries/1-element_at/obj/Debug/net8.0/1-element_at.dll
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-arrays_lists_dictionaries/1-element_at/obj/Debug/net8.0/refint/1-element_at.dll
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-arrays_lists_dictionaries/1-element_at/obj/Debug/net8.0/1-element_at.pdb
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-arrays_lists_dictionaries/1-element_at/obj/Debug/net8.0/1-element_at.genruntimeconfig.cache
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-arrays_lists_dictionaries/1-element_at/obj/Debug/net8.0/ref/1-element_at.dll
