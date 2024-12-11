@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 
-class List
+public class List
 {
     public static int Sum(List<int> myList)
     {
-        HashSet<int> uniqueNumbers = new HashSet<int>(myList);
-        int sum = 0;
-        foreach (int number in uniqueNumbers)
+        HashSet<int> uniqueIntegers = new HashSet<int>(myList);
+        
+        int integerSum = 0;
+        foreach (int integer in uniqueIntegers)
         {
-            sum += number;
+            integerSum += integer;
         }
-        return sum;
+        return integerSum;
     }
 }
