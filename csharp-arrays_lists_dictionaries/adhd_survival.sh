@@ -45,6 +45,7 @@ fi
 # Step 6: Run the project
 echo "Running the project..."
 dotnet run
+sleep 60
 
 # Step 7: Delete specified files
 files_to_delete=("obj" "bin" "$main_file")
@@ -58,9 +59,28 @@ for file in "${files_to_delete[@]}"; do
   fi
 done
 
-# Step 8: Edit the renamed .cs file
-read -p "Ready to edit $csproj_file? (Press Enter to continue)"
-vim "$csproj_file"
+# Step 8: Edit the .csproj file content
+csproj_file="${task_name}.csproj"
+if [ -f "$csproj_file" ]; then
+  echo "Opening the .csproj file for manual editing..."
+  echo "Ensure it contains the following content:"
+  echo "
+<Project Sdk=\"Microsoft.NET.Sdk\">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <RootNamespace>_2_replace_element</RootNamespace>
+  </PropertyGroup>
+
+</Project>
+"
+  read -p "Press Enter to open the file with vim for editing..."
+  vim "$csproj_file"
+  echo "Make sure to save and exit vim after making the changes!"
+else
+  echo "Error: $csproj_file not found! Skipping manual edit."
+fi
 
 # Step 9: Congratulate the user
 congratulate "$task_name"
