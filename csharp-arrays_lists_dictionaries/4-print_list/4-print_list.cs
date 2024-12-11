@@ -10,23 +10,21 @@ class List
             Console.WriteLine("Size cannot be negative");
             return null;
         }
-        List<int> list = new List<int>();
+
+        List<int> newList = new List<int>();
+
+        if (size == 0)
+        {
+            Console.WriteLine();
+            return newList;
+        }
 
         for (int i = 0; i < size; i++)
         {
-            list.Add(i);
-        }
-
-        for (int i = 0; i < list.Count; i++)
-        {
-            Console.Write(list[i]);
-            if (i < list.Count - 1)
-            {
-                Console.Write(" ");
-            }
+            Console.Write("{0}{1}", i, i != size - 1 ? " ": "" );
+            newList.Add(i);
         }
         Console.WriteLine();
-
-        return list;
+        return newList;
     }
 }
