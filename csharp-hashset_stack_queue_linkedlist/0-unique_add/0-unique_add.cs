@@ -1,11 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 class List
 {
     public static int Sum(List<int> myList)
     {
-        return myList.Distinct().Sum();
+        HashSet<int> uniqueNumbers = new HashSet<int>(myList);
+        int sum = 0;
+        foreach (int number in uniqueNumbers)
+        {
+            sum += number;
+        }
+        return sum;
     }
 }
