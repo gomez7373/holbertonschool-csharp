@@ -61,10 +61,10 @@ done
 # Step 8: Modify the .csproj file
 csproj_file="${task_name}.csproj"
 if [ -f "$csproj_file" ]; then
-  echo "Editing the .csproj file to update configuration..."
-  # Replace the entire .csproj file content with the new structure
-  cat > "$csproj_file" <<EOL
-<Project Sdk="Microsoft.NET.Sdk">
+  echo "Opening the .csproj file for manual editing..."
+  echo "Please modify the file as follows and save it:"
+  echo "
+<Project Sdk=\"Microsoft.NET.Sdk\">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -73,7 +73,10 @@ if [ -f "$csproj_file" ]; then
   </PropertyGroup>
 
 </Project>
-EOL
+"
+  read -p "Press Enter to open the file with vim..."
+  vim "$csproj_file"
+  echo "Make sure to save the changes before exiting vim."
 else
   echo "Error: $csproj_file not found!"
   exit 1

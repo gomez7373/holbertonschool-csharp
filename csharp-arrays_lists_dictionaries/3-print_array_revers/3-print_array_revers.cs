@@ -6,21 +6,17 @@ class Array
     {
         if (array == null)
         {
-            Console.WriteLine("");
+            Console.WriteLine();
             return;
         }
-
-        for (int i = array.Length - 1; i >= 0; i--)
+        for (int x = array.Length - 1; x >= 0; x--)
         {
-            if (i == 0)
+            Console.Write(array[x]);
+            if (x > 0)
             {
-                Console.Write(array[i]);
-            }
-            else
-            {
-                Console.Write($"{array[i]} ");
+                Console.Write(" ");
             }
         }
-        Console.WriteLine("");
+        Console.WriteLine();
     }
 }
