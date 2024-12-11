@@ -4,20 +4,17 @@ class Line
 {
     public static void PrintDiagonal(int length)
     {
-        if (length <= 0)
-        {
+        if (length < 0)
             Console.WriteLine();
-        }
         else
         {
+            string emptySpace = "";
             for (int i = 0; i < length; i++)
             {
-                for (int j = 0; j < i; j++)
-                {
-                    Console.Write(" ");
-                }
-                Console.WriteLine("\\");
+                Console.WriteLine(emptySpace + "\\");
+                emptySpace += " ";
             }
+            Console.WriteLine();
         }
     }
 }
