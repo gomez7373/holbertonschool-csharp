@@ -1,0 +1,5 @@
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-arrays_lists_dictionaries/3-print_array_reverse/obj/Debug/net8.0/3-print_array_reverse.GeneratedMSBuildEditorConfig.editorconfig
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-arrays_lists_dictionaries/3-print_array_reverse/obj/Debug/net8.0/3-print_array_reverse.AssemblyInfoInputs.cache
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-arrays_lists_dictionaries/3-print_array_reverse/obj/Debug/net8.0/3-print_array_reverse.AssemblyInfo.cs
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-arrays_lists_dictionaries/3-print_array_reverse/obj/Debug/net8.0/3-print_array_reverse.csproj.CoreCompileInputs.cache
+/home/sgc91/ar_vr_1st/holbertonschool-csharp/csharp-arrays_lists_dictionaries/3-print_array_reverse/obj/Debug/net8.0/3-print_array_reverse.sourcelink.json
