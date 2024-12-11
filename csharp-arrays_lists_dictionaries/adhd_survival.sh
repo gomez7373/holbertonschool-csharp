@@ -45,7 +45,6 @@ fi
 # Step 6: Run the project
 echo "Running the project..."
 dotnet run
-sleep 60
 
 # Step 7: Delete specified files
 files_to_delete=("obj" "bin" "$main_file")
