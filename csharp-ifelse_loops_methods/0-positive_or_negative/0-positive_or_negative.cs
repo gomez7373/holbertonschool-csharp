@@ -4,23 +4,20 @@ class Program
 {
     static void Main(string[] args)
     {
-        Random random = new Random();
-        int number = random.Next(-10, 11); // Generates a random number between -10 and 10 (inclusive)
+        Random rndm = new Random();
+        int number = rndm.Next(-10, 10);
 
-        Console.Write($"{number} is ");
-        
         if (number > 0)
         {
-            Console.WriteLine("positive");
+            Console.WriteLine($"{number} is positive");
         }
-        else if (number == 0)
+        else if (number < 0)
         {
-            Console.WriteLine("zero");
+            Console.WriteLine($"{number} is negative");
         }
         else
         {
-            Console.WriteLine("negative");
+            Console.WriteLine($"{number} is zero");
         }
     }
 }
-
