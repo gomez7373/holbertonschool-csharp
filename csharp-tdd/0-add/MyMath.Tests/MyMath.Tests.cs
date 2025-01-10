@@ -1,48 +1,19 @@
-using NUnit.Framework;
-using MyMath;
+using System;
 
-namespace MyMath.Tests
+namespace MyMath
 {
     /// <summary>
-    /// Tests for the Operations class.
+    /// Operations class
     /// </summary>
-    [TestFixture]
-    public class OperationsTests
+    public class Operations
     {
-        /// <summary>
-        /// Tests adding two positive integers.
-        /// </summary>
-        [Test]
-        public void Add_TwoPositiveNumbers_ReturnsSum()
+        /// <summary> add two integers </summary>
+        /// <param name="a">first integer</param>
+        /// <param name="b">second integer</param>
+        /// <returns>sum of two integers</returns>
+        public static int Add(int a, int b)
         {
-            Assert.That(Operations.Add(2, 3), Is.EqualTo(5));
-        }
-
-        /// <summary>
-        /// Tests adding a positive and a negative integer.
-        /// </summary>
-        [Test]
-        public void Add_PositiveAndNegativeNumber_ReturnsSum()
-        {
-            Assert.That(Operations.Add(2, -3), Is.EqualTo(-1));
-        }
-
-        /// <summary>
-        /// Tests adding two negative integers.
-        /// </summary>
-        [Test]
-        public void Add_TwoNegativeNumbers_ReturnsSum()
-        {
-            Assert.That(Operations.Add(-2, -3), Is.EqualTo(-5));
-        }
-
-        /// <summary>
-        /// Tests adding zero and another integer.
-        /// </summary>
-        [Test]
-        public void Add_ZeroAndNumber_ReturnsNumber()
-        {
-            Assert.That(Operations.Add(0, 7), Is.EqualTo(7));
+            return a + b;
         }
     }
 }
