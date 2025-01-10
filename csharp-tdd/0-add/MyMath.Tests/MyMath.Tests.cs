@@ -15,7 +15,7 @@ namespace MyMath.Tests
         [Test]
         public void Add_TwoPositiveNumbers_ReturnsSum()
         {
-            Assert.AreEqual(5, Operations.Add(2, 3));
+            Assert.That(Operations.Add(2, 3), Is.EqualTo(5));
         }
 
         /// <summary>
@@ -24,7 +24,7 @@ namespace MyMath.Tests
         [Test]
         public void Add_PositiveAndNegativeNumber_ReturnsSum()
         {
-            Assert.AreEqual(-1, Operations.Add(2, -3));
+            Assert.That(Operations.Add(2, -3), Is.EqualTo(-1));
         }
 
         /// <summary>
@@ -33,7 +33,7 @@ namespace MyMath.Tests
         [Test]
         public void Add_TwoNegativeNumbers_ReturnsSum()
         {
-            Assert.AreEqual(-5, Operations.Add(-2, -3));
+            Assert.That(Operations.Add(-2, -3), Is.EqualTo(-5));
         }
 
         /// <summary>
@@ -42,7 +42,7 @@ namespace MyMath.Tests
         [Test]
         public void Add_ZeroAndNumber_ReturnsNumber()
         {
-            Assert.AreEqual(7, Operations.Add(0, 7));
+            Assert.That(Operations.Add(0, 7), Is.EqualTo(7));
         }
     }
 }
