@@ -42,23 +42,26 @@ def analyze_betty_style(file_path):
 
 def fix_betty_style(file_path, lines):
     """Fixes Betty-style issues in the code and rewrites the file."""
-    for i, line in enumerate(lines):
+    fixed_lines = []
+    for line in lines:
         # Fix indentation
-        lines[i] = line.replace('\t', ' ' * 4)
-        
-        # Fix Allman brace style
-        if '{' in line and not line.strip().startswith('{') and '}' not in line:
-            lines[i] = line.replace('{', '') + '\n' + ' ' * 4 + '{'
+        fixed_line = line.replace('\t', ' ' * 4)
 
-    # Write fixed code to the file
+        # Fix Allman brace style
+        if '{' in fixed_line and not fixed_line.strip().startswith('{') and '}' not in fixed_line:
+            fixed_line = fixed_line.replace('{', '').rstrip() + '\n' + ' ' * 4 + '{'
+
+        fixed_lines.append(fixed_line)
+
+    # Write fixed code back to the file
     with open(file_path, 'w') as file:
-        file.writelines(lines)
+        file.writelines(fixed_lines)
 
     print(f"✨ Congrats! '{file_path}' is now Betty-style compliant! 🎉")
 
 def main():
     if len(sys.argv) != 2:
-        print("Usage: python betty_style_checker.py <directory_path>")
+        print("Usage: python3 betty_style_checker.py <directory_path>")
         sys.exit(1)
 
     directory = sys.argv[1]
