@@ -1,28 +1,38 @@
 using NUnit.Framework;
 using Text;
 
-namespace Text.Tests
+namespace TextTests
 {
-    [TestFixture]
     public class StrTests
     {
         [Test]
-        public void CamelCase_ValidCamelCaseString_ReturnsWordCount()
+        public void CamelCase_InputFive_ResultFive()
         {
-            Assert.AreEqual(5, Str.CamelCase("thisIsCamelCaseString"));
-            Assert.AreEqual(1, Str.CamelCase("word"));
+            string input = "bofLeTestDrivenDevelopment";
+
+            int result = Str.CamelCase(input);
+
+            Assert.AreEqual(5, result);
         }
 
         [Test]
-        public void CamelCase_EmptyString_ReturnsZero()
+        public void CamelCase_Null_ResultZero()
         {
-            Assert.AreEqual(0, Str.CamelCase(""));
+            string input = null;
+
+            int result = Str.CamelCase(input);
+
+            Assert.AreEqual(0, result);
         }
 
         [Test]
-        public void CamelCase_SingleWordString_ReturnsOne()
+        public void CamelCase_Empty_ResultFive()
         {
-            Assert.AreEqual(1, Str.CamelCase("word"));
+            string input = "";
+
+            int result = Str.CamelCase(input);
+
+            Assert.AreEqual(0, result);
         }
     }
 }
