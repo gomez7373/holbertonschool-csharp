@@ -1,9 +1,9 @@
 namespace MyMath
 {
     /// <summary>
-    /// Provides basic mathematical operations.
+    /// Contains mathematical operations.
     /// </summary>
-    public class Operations
+    public static class Operations
     {
         /// <summary>
         /// Adds two integers.
