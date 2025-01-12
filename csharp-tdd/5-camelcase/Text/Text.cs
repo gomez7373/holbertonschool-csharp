@@ -1,28 +1,30 @@
+﻿using System;
+
 namespace Text
 {
     /// <summary>
-    /// Contains methods for string analysis.
+    /// Class to count the number of words in a camel case string.
     /// </summary>
-    public static class Str
+    public class Str
     {
         /// <summary>
-        /// Counts the number of words in a camelCase string.
+        /// Count the number of words in a camel case string.
         /// </summary>
-        /// <param name="s">CamelCase string.</param>
-        /// <returns>Number of words in the string.</returns>
+        /// <param name="s"></param>
+        /// <returns></returns>
         public static int CamelCase(string s)
         {
-            if (string.IsNullOrEmpty(s))
+            if (s == null || s == "")
                 return 0;
+            int count = 1;
 
-            int wordCount = 1; // Starts with 1 assuming valid camelCase
-            foreach (char c in s)
+            foreach (char character in s)
             {
-                if (char.IsUpper(c))
-                    wordCount++;
+                if (char.IsUpper(character))
+                    count++;
             }
 
-            return wordCount;
+            return count;
         }
     }
 }
