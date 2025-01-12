@@ -3,32 +3,56 @@ using Text;
 
 namespace Text.Tests
 {
-    [TestFixture]
     public class StrTests
     {
         [Test]
-        public void UniqueChar_ValidString_ReturnsIndex()
+        public void UniqueChar_Index2_Return2()
         {
-            Assert.AreEqual(0, Str.UniqueChar("abcdef"));
-            Assert.AreEqual(4, Str.UniqueChar("swiss"));
+            string input = "aabcc";
+
+            int result = Str.UniqueChar(input);
+
+            Assert.AreEqual(2, result);
         }
 
         [Test]
-        public void UniqueChar_NoUniqueChar_ReturnsNegativeOne()
+        public void UniqueChar_None_ReturnMinus()
         {
-            Assert.AreEqual(-1, Str.UniqueChar("aabbcc"));
+            string input = "aabbcc";
+
+            int result = Str.UniqueChar(input);
+
+            Assert.AreEqual(-1, result);
         }
 
         [Test]
-        public void UniqueChar_EmptyString_ReturnsNegativeOne()
+        public void UniqueChar_Empty_ReturnMinus()
         {
-            Assert.AreEqual(-1, Str.UniqueChar(""));
+            string input = "";
+
+            int result = Str.UniqueChar(input);
+
+            Assert.AreEqual(-1, result);
         }
 
         [Test]
-        public void UniqueChar_SingleCharacterString_ReturnsZero()
+        public void UniqueChar_Null_ReturnMinus()
         {
-            Assert.AreEqual(0, Str.UniqueChar("a"));
+            string input = null;
+
+            int result = Str.UniqueChar(input);
+
+            Assert.AreEqual(-1, result);
+        }
+
+        [Test]
+        public void UniqueChar_Index0_Return0()
+        {
+            string input = "a";
+
+            int result = Str.UniqueChar(input);
+
+            Assert.AreEqual(0, result);
         }
     }
 }

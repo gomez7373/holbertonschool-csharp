@@ -1,35 +1,37 @@
+using System;
 using System.Collections.Generic;
 
 namespace Text
 {
     /// <summary>
-    /// Contains methods for string analysis.
+    /// Str class
     /// </summary>
-    public static class Str
+    public class Str
     {
         /// <summary>
-        /// Finds the index of the first non-repeating character in a string.
+        /// Find the first non-repeating character in a string
         /// </summary>
-        /// <param name="s">Input string.</param>
-        /// <returns>Index of first unique character, or -1 if none exists.</returns>
+        /// <param name="s">string to search in</param>
+        /// <returns> index of first unique char, or -1 if none/null/empty</returns>
         public static int UniqueChar(string s)
         {
-            if (string.IsNullOrEmpty(s))
+            if (s == null || s == "")
                 return -1;
+            
+            Dictionary<char, int> charCount = new Dictionary<char, int>();
 
-            Dictionary<char, int> charCounts = new Dictionary<char, int>();
-            for (int i = 0; i < s.Length; i++)
+            foreach (char character in s)
             {
-                if (charCounts.ContainsKey(s[i]))
-                    charCounts[s[i]]++;
+                if (charCount.ContainsKey(character))
+                    charCount[character]++;
                 else
-                    charCounts[s[i]] = 1;
+                    charCount[character] = 1;
             }
 
-            for (int i = 0; i < s.Length; i++)
+            for (int index = 0; index < s.Length; index++)
             {
-                if (charCounts[s[i]] == 1)
-                    return i;
+                if (charCount[s[index]] == 1)
+                    return index;
             }
 
             return -1;
