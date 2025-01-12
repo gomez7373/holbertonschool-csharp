@@ -1,4 +1,4 @@
-using NUnit.Framework;
+using System.Runtime.CompilerServices;
 using MyMath;
 
 namespace MyMath.Tests
