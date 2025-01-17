@@ -1,4 +1,6 @@
-﻿class Animal
+﻿using System;
+
+class Animal
 {
     
 }
