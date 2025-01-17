@@ -1,11 +1,13 @@
-﻿using System;
-
-class Animal
+﻿/// <summary>
+/// Base class Animal
+/// </summary>
+public class Animal
 {
-    
 }
 
-class Dog : Animal
+/// <summary>
+/// Derived class Dog that inherits from Animal
+/// </summary>
+public class Dog : Animal
 {
-
 }
