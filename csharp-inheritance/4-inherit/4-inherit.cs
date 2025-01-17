@@ -1,13 +1,15 @@
 ﻿/// <summary>
-/// Base class Animal
+/// Empty base class Animal.
 /// </summary>
 public class Animal
 {
+    // Empty class
 }
 
 /// <summary>
-/// Derived class Dog that inherits from Animal
+/// Empty derived class Dog that inherits from Animal.
 /// </summary>
 public class Dog : Animal
 {
+    // Empty class
 }
