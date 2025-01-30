@@ -1,36 +1,34 @@
 ﻿using System;
 
-/// <summary>
-/// Provides a suite of linear algebra helper methods.
-/// </summary>
 class MatrixMath
 {
-    /// <summary>
-    /// Calculates the determinant of a 2D or 3D matrix.
-    /// </summary>
     public static double Determinant(double[,] matrix)
     {
-        if (matrix.GetLength(0) == 2 && matrix.GetLength(1) == 2)
-        {
-            return _Determinant(matrix[0,0], matrix[0,1], matrix[1,0], matrix[1,1]);
-        }
-        else if (matrix.GetLength(0) == 3 && matrix.GetLength(1) == 3)
-        {
-            return (matrix[0,0] * _Determinant(matrix[1,1], matrix[1,2], matrix[2,1], matrix[2,2])) - 
-                    (matrix[0,1] * _Determinant(matrix[1,0], matrix[1,2], matrix[2,0], matrix[2,2])) +
-                    (matrix[0, 2] * _Determinant(matrix[1,0], matrix[1,1], matrix[2,0], matrix[2,1]));
-        }
-        else
-        {
+
+        int rows = matrix.GetLength(0);
+        if (!MatrixCheck(matrix))
             return -1;
-        }
+
+        if (rows == 2)
+            return Math.Round(matrix[0,0] * matrix[1,1] - matrix[1,0] * matrix[0,1], 2);
+
+        double a, b, c, d, e, f, g, h, i;
+        a = matrix[0,0];
+        b = matrix[0,1];
+        c = matrix[0,2];
+        d = matrix[1,0];
+        e = matrix[1,1];
+        f = matrix[1,2];
+        g = matrix[2,0];
+        h = matrix[2,1];
+        i = matrix[2,2];
+        return Math.Round(a*(e*i - f*h)- b*(d*i- f*g) + c*(d*h- e*g), 2);
     }
 
-    // Finds the determinant of a 2D matrix
-    // represented left to right, top to bottom.
-    private static double _Determinant(double a, double b, double c, double d)
+    private static bool MatrixCheck(double[,] matrix)
     {
-        return (a * d + c * b);
+        int rows = matrix.GetLength(0);
+        int cols = matrix.GetLength(1);
+        return (rows == 2 && cols == 2) || (rows == 3 && cols == 3);
     }
 }
-
