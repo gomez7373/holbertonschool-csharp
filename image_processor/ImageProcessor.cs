@@ -1,55 +1,82 @@
-using System;
-using System.Drawing; // Para trabajar con imágenes
-using System.IO;
-using System.Threading.Tasks; // Para usar multihilos modernos (Task)
+﻿using System;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.Threading.Tasks;
+using System.Threading;
+using System.Diagnostics;
+using System.Collections.Generic;
 
-public class ImageProcessor
+class ImageProcessor
 {
-    /// <summary>
-    /// Inverts the colors of each image in the filenames array.
-    /// </summary>
     public static void Inverse(string[] filenames)
     {
-        Parallel.ForEach(filenames, file =>
+        AsyncFunction(filenames);
+    }
+    private static async Task AsyncFunction(string[] filenames)
+    {
+        await Task.WhenAll(Array.ConvertAll(filenames, async file => await ProcessImageThread(file)));
+    }
+    private static async Task ProcessImageThread(string file_name)
+    {
+        Bitmap bitmap = new Bitmap(file_name);
+
+        BitmapData lockedimage = bitmap.LockBits(new Rectangle(0, 0, bitmap.Width, bitmap.Height), ImageLockMode.ReadWrite, bitmap.PixelFormat);
+        int img_size = lockedimage.Stride * lockedimage.Height;
+        byte[] image_copy = new byte[img_size];
+
+        System.Runtime.InteropServices.Marshal.Copy(lockedimage.Scan0, image_copy, 0, img_size);
+
+        for (int i = 0; i < img_size; i++)
+            image_copy[i] = (byte)(255 - image_copy[i]);
+
+        System.Runtime.InteropServices.Marshal.Copy(image_copy, 0, lockedimage.Scan0, img_size);
+        bitmap.UnlockBits(lockedimage);
+
+        string[] slip = file_name.Split(new char[] { '/', '.' });
+        bitmap.Save(slip[slip.Length - 2] + "_inverse." + slip[slip.Length - 1]);
+
+    }
+    public static void Grayscale(string[] filenames)
+    {
+        foreach (var file_name in filenames)
         {
-            try
+            Bitmap bitmap = new Bitmap(file_name);
+
+            for (int y = 0; y < bitmap.Height; y++)
             {
-                using (Bitmap image = new Bitmap(file))
+                for (int x = 0; x < bitmap.Width; x++)
                 {
-                    // Recorre cada píxel
-                    for (int y = 0; y < image.Height; y++)
-                    {
-                        for (int x = 0; x < image.Width; x++)
-                        {
-                            Color original = image.GetPixel(x, y);
-
-                            // Invertir cada canal de color (255 - valor)
-                            Color inverted = Color.FromArgb(
-                                original.A,
-                                255 - original.R,
-                                255 - original.G,
-                                255 - original.B
-                            );
-
-                            image.SetPixel(x, y, inverted);
-                        }
-                    }
-
-                    // Crear el nuevo nombre del archivo
-                    string directory = Path.GetDirectoryName(file);
-                    string filename = Path.GetFileNameWithoutExtension(file);
-                    string extension = Path.GetExtension(file);
-
-                    string newPath = Path.Combine(directory ?? "", $"{filename}_inverse{extension}");
-
-                    image.Save(newPath);
+                    Color pixelColor = bitmap.GetPixel(x, y);
+                    int grey = (pixelColor.R + pixelColor.G + pixelColor.B) / 3;
+                    bitmap.SetPixel(x, y, Color.FromArgb(grey, grey, grey));
                 }
             }
-            catch (Exception ex)
+
+            string[] slip = file_name.Split(new char[] { '/', '.' });
+            bitmap.Save(slip[slip.Length - 2] + "_grayscale." + slip[slip.Length - 1]);
+        }
+    }
+    public static void BlackWhite(string[] filenames, double threshold)
+    {
+        Parallel.ForEach(filenames, file_name =>
+        {
+            Bitmap bitmap = new Bitmap(file_name);
+
+            for (int y = 0; y < bitmap.Height; y++)
             {
-                Console.WriteLine($"Error processing {file}: {ex.Message}");
+                for (int x = 0; x < bitmap.Width; x++)
+                {
+                    Color pixelColor = bitmap.GetPixel(x, y);
+                    double grey = (pixelColor.R + pixelColor.G + pixelColor.B) / 3;
+                    if (grey > threshold)
+                        bitmap.SetPixel(x, y, Color.FromArgb(255, 255, 255));
+                    else
+                        bitmap.SetPixel(x, y, Color.FromArgb(0, 0, 0));
+                }
             }
+
+            string[] slip = file_name.Split(new char[] { '/', '.' });
+            bitmap.Save(slip[slip.Length - 2] + "_bw." + slip[slip.Length - 1]);
         });
     }
 }
-
