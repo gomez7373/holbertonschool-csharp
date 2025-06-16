@@ -1,0 +1,27 @@
+# 🔁 Archivos de compilación
+bin/
+obj/
+
+# 🧪 Archivo de prueba local (no evaluado por Holberton)
+main.cs
+
+# 📂 Carpeta con imágenes originales
+images/
+
+# 🖼️ Archivos procesados generados por el programa (output)
+*_inverse.*
+*_grayscale.*
+*_bw.*
+*_th.*
+
+# 💻 Archivos del entorno/editor
+.vscode/
+*.user
+*.suo
+*.sln
+
+# 🧪 Archivos temporales
+*.DS_Store
+*.tmp
+*.log
+
