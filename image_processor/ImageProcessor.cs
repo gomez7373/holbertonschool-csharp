@@ -58,5 +58,47 @@ public class ImageProcessor
             }
         });
     }
-}
 
+    /// <summary>
+    /// Converts each image provided in the filenames array to grayscale.
+    /// The new image will be saved with '_grayscale' in the name.
+    /// </summary>
+    /// <param name="filenames">Array of file paths to process.</param>
+    public static void Grayscale(string[] filenames)
+    {
+        // Process each file in parallel for performance
+        Parallel.ForEach(filenames, file =>
+        {
+            try
+            {
+                using (Bitmap image = new Bitmap(file))
+                {
+                    // Loop through each pixel
+                    for (int y = 0; y < image.Height; y++)
+                    {
+                        for (int x = 0; x < image.Width; x++)
+                        {
+                            Color original = image.GetPixel(x, y);
+
+                            // Calculate grayscale value using luminance formula
+                            int gray = (int)(0.299 * original.R + 0.587 * original.G + 0.114 * original.B);
+
+                            Color grayscaleColor = Color.FromArgb(original.A, gray, gray, gray);
+                            image.SetPixel(x, y, grayscaleColor);
+                        }
+                    }
+
+                    string filename = Path.GetFileNameWithoutExtension(file);
+                    string extension = Path.GetExtension(file);
+                    string outputPath = Path.Combine(Directory.GetCurrentDirectory(), $"{filename}_grayscale{extension}");
+
+                    image.Save(outputPath);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error processing {file}: {ex.Message}");
+            }
+        });
+    }
+}
