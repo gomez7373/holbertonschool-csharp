@@ -1,0 +1,32 @@
+# Ignore build artifacts
+bin/
+obj/
+*.exe
+*.dll
+*.pdb
+*.cache
+*.log
+
+# XML docs from builds (keep if checker needs it, ignore if not)
+# Uncomment the line below ONLY if Holberton's checker does NOT require the .xml
+# *.xml
+
+# User-specific files
+*.user
+*.suo
+*.userprefs
+
+# Test & backup files
+*.tmp
+*.bak
+*.swp
+*.swn
+*.DS_Store
+
+# VS Code & JetBrains Rider folders
+.vscode/
+.idea/
+
+# Optional: ignore personal test files
+main.cs
+
