@@ -1,4 +1,16 @@
-﻿public class Queue<T>
+﻿using System;
+
+/// <summary>
+/// Generic Queue class
+/// </summary>
+public class Queue<T>
 {
-    public string CheckType() => typeof(T).ToString();
+    /// <summary>
+    /// Returns the type of the generic parameter
+    /// </summary>
+    public string CheckType()
+    {
+        return typeof(T).ToString();
+    }
 }
+
