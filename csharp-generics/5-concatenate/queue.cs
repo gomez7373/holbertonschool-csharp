@@ -40,7 +40,7 @@ public class Queue<T>
         return count;
     }
 
-    /// <summary> Returns the first value and removes it from the queue </summary>
+    /// <summary> Removes the first node and returns its value </summary>
     public T Dequeue()
     {
         if (head == null)
@@ -85,9 +85,7 @@ public class Queue<T>
         }
     }
 
-    /// <summary>
-    /// Concatenates all values if type is string or char
-    /// </summary>
+    /// <summary> Concatenates values if type is string or char </summary>
     public string Concatenate()
     {
         if (head == null)
