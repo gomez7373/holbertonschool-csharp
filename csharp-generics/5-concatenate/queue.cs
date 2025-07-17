@@ -6,9 +6,13 @@ public class Queue<T>
     /// <summary> Node class to hold queue data </summary>
     public class Node
     {
+        /// <summary> Value stored in the node </summary>
         public T value;
+
+        /// <summary> Reference to the next node </summary>
         public Node next;
 
+        /// <summary> Constructor that sets the value of the node </summary>
         public Node(T value)
         {
             this.value = value;
@@ -16,8 +20,13 @@ public class Queue<T>
         }
     }
 
+    /// <summary> First node in the queue </summary>
     private Node head;
+
+    /// <summary> Last node in the queue </summary>
     private Node tail;
+
+    /// <summary> Number of nodes in the queue </summary>
     private int count = 0;
 
     /// <summary> Adds a value to the end of the queue </summary>
@@ -40,7 +49,7 @@ public class Queue<T>
         return count;
     }
 
-    /// <summary> Removes the first node and returns its value </summary>
+    /// <summary> Returns the first value and removes it from the queue </summary>
     public T Dequeue()
     {
         if (head == null)
@@ -85,7 +94,9 @@ public class Queue<T>
         }
     }
 
-    /// <summary> Concatenates values if type is string or char </summary>
+    /// <summary>
+    /// Concatenates all values if type is string or char
+    /// </summary>
     public string Concatenate()
     {
         if (head == null)
@@ -114,4 +125,3 @@ public class Queue<T>
         return result;
     }
 }
-
