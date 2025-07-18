@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <DocumentationFile>bin/Debug/netcoreapp2.1/0-abstract_thinking.xml</DocumentationFile>
+  </PropertyGroup>
+</Project>
