@@ -2,72 +2,81 @@
 using System.Collections;
 using System.Collections.Generic;
 
-/// <summary> Abstract base class. </summary>
+/// <summary>
+/// Abstract class representing a base object.
+/// </summary>
 public abstract class Base
 {
-    /// <summary> Object name. </summary>
+    /// <summary> Name of the object. </summary>
     public string name { get; set; }
 
-    /// <summary> String representation of the object. </summary>
+    /// <summary>
+    /// Overrides ToString() to return a formatted string.
+    /// </summary>
+    /// <returns>Formatted string "<name> is a <type>"</returns>
     public override string ToString()
     {
-        return $"{this.name} is a {this.GetType().Name}";
+        return $"{name} is a {this.GetType().Name}";
     }
 }
 
 /// <summary> Interface for interactive objects. </summary>
 public interface IInteractive
 {
-    /// <summary> Interact method. </summary>
+    /// <summary> Defines Interact method. </summary>
     void Interact();
 }
 
 /// <summary> Interface for breakable objects. </summary>
 public interface IBreakable
 {
-    /// <summary> Durability property. </summary>
+    /// <summary> Durability of the object. </summary>
     int durability { get; set; }
 
-    /// <summary> Break method. </summary>
+    /// <summary> Defines Break method. </summary>
     void Break();
 }
 
 /// <summary> Interface for collectable objects. </summary>
 public interface ICollectable
 {
-    /// <summary> isCollected property. </summary>
+    /// <summary> Indicates if the object is collected. </summary>
     bool isCollected { get; set; }
 
-    /// <summary> Collect method. </summary>
+    /// <summary> Defines Collect method. </summary>
     void Collect();
 }
 
-/// <summary> Door class implementing IInteractive. </summary>
+/// <summary> Door class that inherits from Base and implements IInteractive. </summary>
 public class Door : Base, IInteractive
 {
-    /// <summary> Constructor, sets name. </summary>
+    /// <summary>
+    /// Constructor. If no name is provided, defaults to "Door".
+    /// </summary>
     public Door(string name = "Door")
     {
         this.name = name;
     }
 
-    /// <summary> Interact method implementation. </summary>
+    /// <summary> Interact implementation. </summary>
     public void Interact()
     {
         Console.WriteLine($"You try to open the {name}. It's locked.");
     }
 }
 
-/// <summary> Decoration class implementing IInteractive and IBreakable. </summary>
+/// <summary> Decoration class that inherits from Base and implements IInteractive and IBreakable. </summary>
 public class Decoration : Base, IInteractive, IBreakable
 {
-    /// <summary> Durability of the object. </summary>
+    /// <summary> Whether the decoration is a quest item. </summary>
+    public bool isQuestItem { get; set; }
+
+    /// <summary> Durability of the decoration. </summary>
     public int durability { get; set; }
 
-    /// <summary> Whether it's a quest item. </summary>
-    public bool isQuestItem;
-
-    /// <summary> Constructor for Decoration. </summary>
+    /// <summary>
+    /// Constructor with parameters.
+    /// </summary>
     public Decoration(string name = "Decoration", int durability = 1, bool isQuestItem = false)
     {
         if (durability <= 0)
@@ -78,7 +87,7 @@ public class Decoration : Base, IInteractive, IBreakable
         this.isQuestItem = isQuestItem;
     }
 
-    /// <summary> Interact method. </summary>
+    /// <summary> Interact implementation. </summary>
     public void Interact()
     {
         if (durability <= 0)
@@ -89,7 +98,7 @@ public class Decoration : Base, IInteractive, IBreakable
             Console.WriteLine($"You look at the {name}. Not much to see here.");
     }
 
-    /// <summary> Break method. </summary>
+    /// <summary> Break implementation. </summary>
     public void Break()
     {
         durability--;
@@ -103,20 +112,22 @@ public class Decoration : Base, IInteractive, IBreakable
     }
 }
 
-/// <summary> Key class implementing ICollectable. </summary>
+/// <summary> Key class that inherits from Base and implements ICollectable. </summary>
 public class Key : Base, ICollectable
 {
-    /// <summary> Indicates whether the key has been collected. </summary>
+    /// <summary> Whether the key is collected. </summary>
     public bool isCollected { get; set; }
 
-    /// <summary> Constructor for Key. </summary>
+    /// <summary>
+    /// Constructor.
+    /// </summary>
     public Key(string name = "Key", bool isCollected = false)
     {
         this.name = name;
         this.isCollected = isCollected;
     }
 
-    /// <summary> Collect method. </summary>
+    /// <summary> Collect implementation. </summary>
     public void Collect()
     {
         if (!isCollected)
@@ -138,19 +149,25 @@ public class Objs<T> : IEnumerable<T>
 {
     private List<T> items = new List<T>();
 
-    /// <summary> Add an item to the collection </summary>
+    /// <summary>
+    /// Adds an item to the collection.
+    /// </summary>
     public void Add(T item)
     {
         items.Add(item);
     }
 
-    /// <summary> GetEnumerator for IEnumerable<T> </summary>
+    /// <summary>
+    /// Returns a generic enumerator.
+    /// </summary>
     public IEnumerator<T> GetEnumerator()
     {
         return items.GetEnumerator();
     }
 
-    /// <summary> Non-generic GetEnumerator </summary>
+    /// <summary>
+    /// Returns a non-generic enumerator.
+    /// </summary>
     IEnumerator IEnumerable.GetEnumerator()
     {
         return this.GetEnumerator();
