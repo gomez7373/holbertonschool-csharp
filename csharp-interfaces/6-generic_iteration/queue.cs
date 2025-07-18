@@ -3,33 +3,34 @@ using System.Collections;
 using System.Collections.Generic;
 
 /// <summary>
-/// Generic class that stores a collection of objects of type T
+/// Generic class that implements IEnumerable<T>
 /// </summary>
 public class Objs<T> : IEnumerable<T>
 {
-    private List<T> _objects = new List<T>();
+    private List<T> _objs = new List<T>();
 
     /// <summary>
-    /// Adds an item to the collection
+    /// Adds an item of type T to the list
     /// </summary>
     public void Add(T item)
     {
-        _objects.Add(item);
+        _objs.Add(item);
     }
 
     /// <summary>
-    /// Returns an enumerator that iterates through the collection
+    /// Returns an enumerator for foreach iteration
     /// </summary>
     public IEnumerator<T> GetEnumerator()
     {
-        return _objects.GetEnumerator();
+        return _objs.GetEnumerator();
     }
 
     /// <summary>
-    /// Returns an enumerator that iterates through the collection (non-generic)
+    /// Non-generic enumerator implementation (required by IEnumerable)
     /// </summary>
     IEnumerator IEnumerable.GetEnumerator()
     {
         return this.GetEnumerator();
     }
 }
+
