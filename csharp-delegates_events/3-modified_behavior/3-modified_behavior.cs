@@ -1,92 +1,106 @@
 ﻿using System;
 
-/// <summary> Modifiers for damage or healing effects </summary>
+/// <summary> Modifier type to adjust base value for damage or healing. </summary>
 public enum Modifier
 {
+    /// <summary> Weak effect (50% of base value) </summary>
     Weak,
+
+    /// <summary> Base effect (100% of base value) </summary>
     Base,
+
+    /// <summary> Strong effect (150% of base value) </summary>
     Strong
 }
 
-/// <summary> Delegate to apply modifier to base value </summary>
+/// <summary> Delegate that calculates a modified value based on a Modifier enum. </summary>
 public delegate float CalculateModifier(float baseValue, Modifier modifier);
 
-/// <summary> Player class </summary>
-class Player
+/// <summary> Represents a player character with health. </summary>
+public class Player
 {
     private string name;
-    private float maxHp;
     private float hp;
+    private float maxHp;
 
-    /// <summary> Constructor with default values </summary>
+    /// <summary> Constructor to set the name and max HP of the player. </summary>
     public Player(string name = "Player", float maxHp = 100f)
     {
         this.name = name;
 
-        if (maxHp <= 0f)
+        if (maxHp <= 0)
         {
-            this.maxHp = 100f;
             Console.WriteLine("maxHp must be greater than 0. maxHp set to 100f by default.");
+            this.maxHp = 100f;
         }
         else
+        {
             this.maxHp = maxHp;
+        }
 
         this.hp = this.maxHp;
     }
 
-    /// <summary> Prints the player's current health </summary>
+    /// <summary> Prints the player's current health. </summary>
     public void PrintHealth()
     {
         Console.WriteLine($"{name} has {hp} / {maxHp} health");
     }
 
-    /// <summary> Decreases player's health by damage amount </summary>
+    /// <summary> Reduces the player's HP by a damage value, then validates the new HP. </summary>
     public void TakeDamage(float damage)
     {
-        if (damage < 0f)
-            damage = 0f;
+        if (damage < 0)
+        {
+            Console.WriteLine($"{name} takes 0 damage!");
+            damage = 0;
+        }
+        else
+        {
+            Console.WriteLine($"{name} takes {damage} damage!");
+        }
 
-        Console.WriteLine($"{name} takes {damage} damage!");
-
-        float newHp = this.hp - damage;
+        float newHp = hp - damage;
         ValidateHP(newHp);
     }
 
-    /// <summary> Increases player's health by heal amount </summary>
+    /// <summary> Increases the player's HP by a healing value, then validates the new HP. </summary>
     public void HealDamage(float heal)
     {
-        if (heal < 0f)
-            heal = 0f;
+        if (heal < 0)
+        {
+            Console.WriteLine($"{name} heals 0 HP!");
+            heal = 0;
+        }
+        else
+        {
+            Console.WriteLine($"{name} heals {heal} HP!");
+        }
 
-        Console.WriteLine($"{name} heals {heal} HP!");
-
-        float newHp = this.hp + heal;
+        float newHp = hp + heal;
         ValidateHP(newHp);
     }
 
-    /// <summary> Validates and sets the new hp value </summary>
+    /// <summary> Sets the player’s HP to a valid value within 0 and maxHp. </summary>
     public void ValidateHP(float newHp)
     {
-        if (newHp < 0f)
-            this.hp = 0f;
-        else if (newHp > this.maxHp)
-            this.hp = this.maxHp;
+        if (newHp < 0)
+            this.hp = 0;
+        else if (newHp > maxHp)
+            this.hp = maxHp;
         else
             this.hp = newHp;
     }
 
-    /// <summary> Applies a modifier to a base value </summary>
+    /// <summary> Applies a modifier to a base value and returns the result. </summary>
     public float ApplyModifier(float baseValue, Modifier modifier)
     {
-        switch (modifier)
-        {
-            case Modifier.Weak:
-                return baseValue / 2f;
-            case Modifier.Strong:
-                return baseValue * 1.5f;
-            default:
-                return baseValue;
-        }
+        if (modifier == Modifier.Weak)
+            return baseValue * 0.5f;
+        else if (modifier == Modifier.Strong)
+            return baseValue * 1.5f;
+        else
+            return baseValue;
     }
 }
 
