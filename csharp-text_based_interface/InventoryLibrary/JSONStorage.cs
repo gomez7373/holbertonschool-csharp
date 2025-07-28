@@ -18,7 +18,7 @@ namespace InventoryLibrary
         /// <summary>Adds a new object to storage.</summary>
         public void New(object obj)
         {
-            string key = $"{obj.GetType().Name}.{obj.GetType().GetProperty("id").GetValue(obj)}";
+            string key = $"{obj.GetType().Name}.{obj.GetType().GetProperty("id")?.GetValue(obj)}";
             objects[key] = obj;
         }
 
@@ -35,7 +35,7 @@ namespace InventoryLibrary
             if (!File.Exists(filePath)) return;
             string json = File.ReadAllText(filePath);
             if (!string.IsNullOrWhiteSpace(json))
-                objects = JsonSerializer.Deserialize<Dictionary<string, object>>(json);
+                objects = JsonSerializer.Deserialize<Dictionary<string, object>>(json) ?? new Dictionary<string, object>();
         }
     }
 }
