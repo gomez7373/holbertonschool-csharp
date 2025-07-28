@@ -15,11 +15,5 @@ namespace InventoryLibrary
                 throw new ArgumentException("Name is required");
             this.name = name;
         }
-
-        /// <summary>Returns a string representation of the user.</summary>
-        public override string ToString()
-        {
-            return $"User: {name}";
-        }
     }
 }

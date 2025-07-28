@@ -12,25 +12,19 @@ namespace InventoryLibrary
         /// <summary>Description of the item.</summary>
         public string description { get; set; }
 
-        /// <summary>Price of the item.</summary>
+        /// <summary>Price of the item (limited to 2 decimals).</summary>
         public float price { get; set; }
 
-        /// <summary>Tags associated with the item.</summary>
+        /// <summary>Tags for the item.</summary>
         public List<string> tags { get; set; }
 
-        /// <summary>Initializes a new instance of Item with a required name.</summary>
+        /// <summary>Initializes a new Item with a required name.</summary>
         public Item(string name)
         {
             if (string.IsNullOrWhiteSpace(name))
                 throw new ArgumentException("Name is required");
             this.name = name;
             tags = new List<string>();
-        }
-
-        /// <summary>Returns a string representation of the item.</summary>
-        public override string ToString()
-        {
-            return $"Item: {name} (${price:F2}) - {description}";
         }
     }
 }

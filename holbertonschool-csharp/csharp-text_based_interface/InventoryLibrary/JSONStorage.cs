@@ -8,7 +8,7 @@ namespace InventoryLibrary
     /// <summary>Handles JSON storage for all objects.</summary>
     public class JSONStorage
     {
-        /// <summary>Dictionary of all stored objects (key: ClassName.id, value: object).</summary>
+        /// <summary>Dictionary of stored objects (key: ClassName.id, value: object).</summary>
         public Dictionary<string, object> objects { get; set; } = new Dictionary<string, object>();
         private readonly string filePath = Path.Combine("storage", "inventory_manager.json");
 
@@ -35,22 +35,7 @@ namespace InventoryLibrary
             if (!File.Exists(filePath)) return;
             string json = File.ReadAllText(filePath);
             if (!string.IsNullOrWhiteSpace(json))
-            {
                 objects = JsonSerializer.Deserialize<Dictionary<string, object>>(json);
-            }
-        }
-
-        /// <summary>Deletes an object by key.</summary>
-        public bool Delete(string key)
-        {
-            return objects.Remove(key);
-        }
-
-        /// <summary>Gets an object by key.</summary>
-        public object Get(string key)
-        {
-            objects.TryGetValue(key, out var obj);
-            return obj;
         }
     }
 }
