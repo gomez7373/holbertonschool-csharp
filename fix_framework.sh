@@ -1,5 +1,5 @@
 #!/bin/bash
-# fix_framework.sh - Ajusta TargetFramework y fuerza versiones correctas de xUnit para Holberton
+# fix_framework.sh - Ajusta TargetFramework, xUnit y elimina Nullable para compatibilidad Holberton
 
 project_dir="csharp-text_based_interface"
 tests_proj="$project_dir/InventoryManagement.Tests/InventoryManagement.Tests.csproj"
@@ -17,13 +17,13 @@ find "$project_dir" -name "*.csproj" | while read -r file; do
     # Forzar TargetFramework único
     sed -i 's#<TargetFrameworks>.*</TargetFrameworks>#<TargetFramework>netcoreapp2.1</TargetFramework>#' "$file"
     sed -i 's#<TargetFramework>.*</TargetFramework>#<TargetFramework>netcoreapp2.1</TargetFramework>#' "$file"
+    # Eliminar configuraciones Nullable no soportadas
+    sed -i '/<Nullable>.*<\/Nullable>/d' "$file"
 done
 
 echo "🛠️ Ajustando xUnit a versiones compatibles..."
 if [ -f "$tests_proj" ]; then
-    # Eliminar cualquier línea existente de xunit
     sed -i '/xunit/d' "$tests_proj"
-    # Insertar referencias correctas antes del cierre de ItemGroup
     sed -i '/<\/ItemGroup>/i \ \ \ \ <PackageReference Include="xunit" Version="2.4.1" />\n \ \ \ \ <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3" />' "$tests_proj"
 fi
 
