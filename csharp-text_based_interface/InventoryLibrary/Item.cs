@@ -10,7 +10,7 @@ namespace InventoryLibrary
         public string name { get; set; }
 
         /// <summary>Description of the item.</summary>
-        public string? description { get; set; } = string.Empty;
+        public string description { get; set; } = string.Empty;
 
         /// <summary>Price of the item.</summary>
         public float price { get; set; }
