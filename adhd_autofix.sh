@@ -27,7 +27,7 @@ done
 echo "🛠️ Ajustando xUnit a versiones compatibles..."
 if [ -f "$tests_proj" ]; then
     sed -i '/xunit/d' "$tests_proj"
-    sed -i '/<\/ItemGroup>/i \ \ \ \ <PackageReference Include="xunit" Version="2.4.1" />\n \ \ \ \ <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3" />' "$tests_proj"
+    sed -i '/<\/ItemGroup>/i \ \ \ \ <PackageReference Include="xunit" Version="2.4.1" />\n \ \ \ \ <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3" />\n \ \ \ \ <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.0.1" />' "$tests_proj"
 fi
 
 echo "📦 Instalando Newtonsoft.Json..."
