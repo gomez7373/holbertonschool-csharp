@@ -1,5 +1,5 @@
 #!/bin/bash
-# fix_framework.sh - Ajusta TargetFramework, xUnit y elimina Nullable para compatibilidad Holberton
+# fix_framework.sh - Ajusta TargetFramework, xUnit y limpia archivos innecesarios
 
 project_dir="csharp-text_based_interface"
 tests_proj="$project_dir/InventoryManagement.Tests/InventoryManagement.Tests.csproj"
@@ -9,15 +9,15 @@ if [ ! -d "$project_dir" ]; then
     exit 1
 fi
 
+echo "🧹 Eliminando Class1.cs innecesario..."
+rm -f "$project_dir/InventoryLibrary/Class1.cs"
+
 echo "🔍 Corrigiendo todos los .csproj a netcoreapp2.1..."
 find "$project_dir" -name "*.csproj" | while read -r file; do
     echo "🛠️ Modificando: $file"
-    # Forzar el SDK a Microsoft.NET.Sdk
     sed -i 's#<Project Sdk=".*">#<Project Sdk="Microsoft.NET.Sdk">#' "$file"
-    # Forzar TargetFramework único
     sed -i 's#<TargetFrameworks>.*</TargetFrameworks>#<TargetFramework>netcoreapp2.1</TargetFramework>#' "$file"
     sed -i 's#<TargetFramework>.*</TargetFramework>#<TargetFramework>netcoreapp2.1</TargetFramework>#' "$file"
-    # Eliminar configuraciones Nullable no soportadas
     sed -i '/<Nullable>.*<\/Nullable>/d' "$file"
 done
 
